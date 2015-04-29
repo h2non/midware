@@ -1,13 +1,12 @@
-# mware
+# midware [![Build Status](https://travis-ci.org/tur-nr/node-mware.svg?branch=master)](https://travis-ci.org/tur-nr/node-mware)
 
-mware is a utility for creating middleware paradigms with any node or browser application. Inspired by the middleware pattern in [connect](https://github.com/senchalabs/connect).
-
-[![Build Status](https://travis-ci.org/tur-nr/node-mware.svg?branch=master)](https://travis-ci.org/tur-nr/node-mware)
+midware is a utility for creating middleware with any node or browser application. 
+Inspired by the middleware pattern by [connect](https://github.com/senchalabs/connect).
 
 ### Example
 
 ```js
-var use = require('mware')();
+var use = require('midware')();
 var message = {};
 
 use(function(msg, next) {
@@ -28,15 +27,21 @@ use.run(message, function(err) {
 To install mware in a Node application use npm.
 
 ```
-$ npm install mware
+npm install midware
 ```
 
 ### Browser
 
-No tests available for the browser but you may try using it via [webpack](https://github.com/webpack/webpack).
+```
+bower install midware
+```
 
 ```
-$ webpack index.js mware.js
+component install h2non/midware
+```
+
+```
+<script src="cdn.rawgit.com/h2non/midware/0.1.0/midware.js"></script>
 ```
 
 ## Test
