@@ -1,31 +1,28 @@
 {
-  "name": "mware",
-  "version": "0.0.3",
-  "description": "Module for creating middleware paradigms.",
+  "name": "midware",
+  "version": "0.1.0",
+  "description": "Module for creating connect-style middlewares. Dependency-free. Runs in the browser and node.js",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tur-nr/node-mware"
+    "url": "https://github.com/h2non/midware"
   },
   "keywords": [
     "middleware",
     "middle-ware",
     "use",
-    "custom"
+    "custom",
+    "connect"
   ],
-  "author": "Christopher Turner <turner296@gmail.com>",
+  "author": "Tomas Aparicio",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tur-nr/node-mware/issues"
+    "url": "https://github.com/h2non/midware/issues"
   },
-  "homepage": "https://github.com/tur-nr/node-mware",
-  "dependencies": {
-    "isval": "0.0.2",
-    "sliced": "0.0.5"
-  },
+  "homepage": "https://github.com/h2non/midware",
   "devDependencies": {
     "mocha": "^1.21.4"
   }
