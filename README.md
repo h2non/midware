@@ -1,4 +1,4 @@
-# midware [![Build Status](https://travis-ci.org/tur-nr/node-mware.svg?branch=master)](https://travis-ci.org/tur-nr/node-mware)
+# midware [![Build Status](https://travis-ci.org/h2non/midware.svg?branch=master)](https://travis-ci.org/h2non/midware)
 
 midware is a utility for creating middleware with any node or browser application. 
 Inspired by the middleware pattern by [connect](https://github.com/senchalabs/connect).
