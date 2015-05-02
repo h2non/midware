@@ -2,9 +2,10 @@
   "name": "midware",
   "version": "0.1.0",
   "description": "Module for creating connect-style middlewares. Dependency-free. Runs in the browser and node.js",
-  "main": "index.js",
+  "main": "midware.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha"
+    "test": "./node_modules/.bin/mocha",
+    "browser": "./node_modules/.bin/uglifyjs midware.js --mangle --source-map midware.min.js.map --source-map-url http://cdn.rawgit.com/h2non/midware/0.1.0/midware.min.js.map > midware.min.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
   },
   "homepage": "https://github.com/h2non/midware",
   "devDependencies": {
-    "mocha": "^1.21.4"
+    "mocha": "^1.21.4",
+    "uglify-js": "^2.4.20"
   }
 }

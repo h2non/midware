@@ -1,0 +1,29 @@
+{
+  "name": "midware",
+  "version": "0.1.0",
+  "description": "Module for creating connect-style middlewares. Dependency-free. Runs in the browser and node.js",
+  "license": "MIT",
+  "repository": "h2non/midware",
+  "author": "Tomas Aparicio",
+  "main": "midware.js",
+  "keywords": [
+    "middleware",
+    "middle-ware",
+    "use",
+    "custom",
+    "connect"
+  ],
+  "ignore": [
+    "**/.*",
+    ".*",
+    "*.md",
+    "*.sh",
+    "test",
+    "Makefile",
+    ".editorconfig",
+    ".gitignore",
+    ".travis.yml",
+    ".npmignore",
+    "package.json"
+  ]
+}

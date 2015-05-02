@@ -130,3 +130,4 @@ use.run(function(err) {
 [MIT](LICENSE)
 
 Copyright (c) 2014 [Christopher Turner](https://github.com/tur-nr)
+Copyright (c) 2015 [Tomas Aparicio](https://github.com/h2non)
