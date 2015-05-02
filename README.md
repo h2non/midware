@@ -43,7 +43,7 @@ component install h2non/midware
 ```
 
 ```
-<script src="cdn.rawgit.com/h2non/midware/0.1.0/midware.js"></script>
+<script src="//cdn.rawgit.com/h2non/midware/0.1.0/midware.js"></script>
 ```
 
 ## Test
