@@ -15,8 +15,7 @@
 
   function midware(ctx) {
     var calls = []
-
-    if (!ctx) { ctx = null }
+    ctx = ctx || null
        
     function use() {
       var args = slice.call(arguments)
