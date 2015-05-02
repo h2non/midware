@@ -1,7 +1,9 @@
 # midware [![Build Status](https://travis-ci.org/h2non/midware.svg?branch=master)](https://travis-ci.org/h2non/midware)
 
-midware is a utility for creating middleware with any node or browser application. 
+midware is a tiny module for creating middleware for any node or browser application. 
 Inspired by the middleware pattern by [connect](https://github.com/senchalabs/connect).
+
+It's only ~60 SLOC.
 
 ### Example
 
