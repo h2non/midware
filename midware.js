@@ -39,8 +39,8 @@
         done = args.pop()
       }
 
-      if (!stack.length && done) {
-        done.call(ctx)
+      if (!stack.length) {
+        if (done) done.call(ctx)
         return
       }
 
