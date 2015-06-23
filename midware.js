@@ -47,7 +47,11 @@
       args.push(next)
 
       function exec() {
-        stack.shift().apply(ctx, args)
+        try {
+          stack.shift().apply(ctx, args)
+        } catch (e) {
+          next(e)
+        }
       }
 
       function next(err, end) {
