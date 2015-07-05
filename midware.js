@@ -33,19 +33,20 @@
     use.run = function run() {
       var done
       var args = slice.call(arguments)
-      var stack = calls.slice()
-
+      
       if (typeof args[args.length - 1] === 'function') {
         done = args.pop()
       }
-
-      if (!stack.length) {
+      
+      if (!calls.length) {
         if (done) done.call(ctx)
         return
       }
-
+      
+      var stack = calls.slice()
       args.push(next)
-
+      
+      
       function exec() {
         var fn = stack.shift()
         try {
