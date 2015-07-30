@@ -22,11 +22,10 @@
     function use() {
       var args = toArray(arguments)
 
-      args.filter(function (fn) {
-        return typeof fn === 'function'
-      })
-      .forEach(function (fn) {
-        calls.push(fn)
+      args.forEach(function (fn) {
+        if (typeof fn === 'function') {
+          calls.push(fn)
+        }
       })
 
       return ctx
