@@ -142,4 +142,47 @@ describe('midware', function() {
       })
     })
   })
+
+  describe('#remove()', function() {
+    it('should remove by function reference', function (done) {
+      var use = midware()
+      var fn = function (next) { next('err') }
+      use(fn)
+      use(function (next) { next() })
+      
+      use.remove(fn)
+      assert.equal(use.stack.length, 1)
+
+      use.run(function (err) {
+        assert.equal(err, null)
+        done()
+      })
+    })
+
+    it('should remove by function name', function (done) {
+      var use = midware()
+      function fn(next) { next('err') }
+      use(fn)
+      use(function (next) { next() })
+      use.remove('fn')
+      assert.equal(use.stack.length, 1)
+
+      use.run(function (err) {
+        assert.equal(err, null)
+        done()
+      })
+    })
+
+    it('should not remove a missing function', function (done) {
+      var use = midware()
+      use(function (next) { next() })
+      use.remove('missing')
+      assert.equal(use.stack.length, 1)
+
+      use.run(function (err) {
+        assert.equal(err, null)
+        done()
+      })
+    })
+  })
 })
