@@ -1,6 +1,6 @@
 {
   "name": "midware",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Module for creating connect-style middlewares. Dependency-free. Runs in the browser and node.js",
   "main": "midware.js",
   "scripts": {

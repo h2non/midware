@@ -13,7 +13,7 @@
   'use strict'
 
   var slice = Array.prototype.slice
-  midware.VERSION = '0.1.4'
+  midware.VERSION = '0.1.5'
 
   function midware(ctx) {
     var calls = use.stack = []
