@@ -136,8 +136,9 @@ describe('midware', function() {
         , function() { throw new Error('should never have thrown') }
       )
 
-      use.run(function(err) {
+      use.run(function(err, end) {
         assert.equal(err, null)
+        assert.equal(end, true)
         done()
       })
     })
