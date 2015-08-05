@@ -58,7 +58,7 @@
       function next(err, end) {
         if (err || end || !stack.length) {
           stack = null
-          if (done) { done.call(ctx, err) }
+          if (done) { done.call(ctx, err, end) }
           return
         }
         exec()
