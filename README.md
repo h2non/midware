@@ -103,6 +103,10 @@ use(function(next) {
   next(new Error()) // stops middleware and gives error
   next(null, true) // tells middleware to stop
 })
+
+use.run(function (err, ended) {
+  // ...
+})
 ```
 
 ### Apply Context
