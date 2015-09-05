@@ -13,7 +13,7 @@
   'use strict'
 
   var slice = Array.prototype.slice
-  midware.VERSION = '0.1.5'
+  midware.VERSION = '0.1.6'
 
   function midware(ctx) {
     var calls = use.stack = []
@@ -75,6 +75,11 @@
           break
         }
       }
+    }
+
+        
+    use.flush = function () {
+      calls.splice(0)
     }
 
     return use
