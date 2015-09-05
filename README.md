@@ -152,6 +152,7 @@ use.remove(test) // by function reference
 #### use(**callback...**)
 #### use.remove(name|function)
 #### use.run(*[args...]*, *[done]*)
+#### use.flush()
 #### use.stack = [ function... ]
 
 ## License
