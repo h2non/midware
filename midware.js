@@ -12,22 +12,18 @@
 }(this, function (exports) {
   'use strict'
 
-  var slice = Array.prototype.slice
-  midware.VERSION = '0.1.6'
-
   function midware(ctx) {
     var calls = use.stack = []
     ctx = ctx || null
        
     function use() {
-      var args = toArray(arguments)
-
-      args.forEach(function (fn) {
-        if (typeof fn === 'function') {
-          calls.push(fn)
-        }
+      toArray(arguments)
+      .filter(function (fn) {
+        return typeof fn === 'function'
       })
-
+      .forEach(function (fn) {
+        calls.push(fn)
+      })
       return ctx
     }
 
@@ -46,7 +42,7 @@
       var stack = calls.slice()
       args.push(next)
       
-      function exec() {
+      function runNext() {
         var fn = stack.shift()
         try {
           fn.apply(ctx, args)
@@ -58,13 +54,13 @@
       function next(err, end) {
         if (err || end || !stack.length) {
           stack = null
-          if (done) { done.call(ctx, err, end) }
-          return
+          if (done) done.call(ctx, err, end)
+        } else {
+          runNext()
         }
-        exec()
       }
 
-      exec()
+      runNext()
     }
 
     use.remove = function (name) {
@@ -77,7 +73,6 @@
       }
     }
 
-        
     use.flush = function () {
       calls.splice(0)
     }
@@ -92,6 +87,7 @@
     }
     return args
   }
-
+  
+  midware.VERSION = '0.1.6'
   exports.midware = midware
 }))
