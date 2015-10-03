@@ -84,6 +84,6 @@
     return args
   }
   
-  midware.VERSION = '0.1.6'
+  midware.VERSION = '0.1.7'
   exports.midware = midware
 }))
