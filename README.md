@@ -1,9 +1,8 @@
 # midware [![Build Status](https://travis-ci.org/h2non/midware.svg?branch=master)](https://travis-ci.org/h2non/midware)
 
-**midware** is a **tiny module** to **createsimple middleware** layers for any node.js or browser application. 
-Inspired in the middleware pattern by [connect](https://github.com/senchalabs/connect).
+**midware** is a **tiny module** to **create domain-agnostic middleware** layers for any node.js or browser application. Inspired in the middleware pattern by [connect](https://github.com/senchalabs/connect).
 
-It's only ~80 SLOC.
+It's just ~80 SLOC.
 
 ### Example
 
@@ -24,9 +23,7 @@ use.run(message, function(err) {
 
 ## Installation
 
-### Node
-
-To install midware in a Node application use npm.
+### Node.js
 
 ```
 npm install midware
@@ -34,14 +31,17 @@ npm install midware
 
 ### Browser
 
+Via bower:
 ```
 bower install midware
 ```
 
+Via component:
 ```
 component install h2non/midware
 ```
 
+Loading the script:
 ```
 <script src="//cdn.rawgit.com/h2non/midware/0.1.7/midware.js"></script>
 ```
